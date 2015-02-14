@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 =end
+  validates :first_name, :last_name, :phone, :email, presence: :true
 end
